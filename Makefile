@@ -8,8 +8,8 @@ all: $(TARGETS)
 clean:
 	rm -rf *.o $(TARGETS)
 
-ipv4_chat: main.c ipv4chat_utils.c
-	gcc $(CFLAGS) -pthread -o ipv4_chat main.c ipv4chat_utils.c
+ipv4_chat: src/main.c src/ipv4chat_utils.c
+	gcc $(CFLAGS) -pthread -o ipv4_chat src/main.c src/ipv4chat_utils.c
 
 install:
 	sudo apt update
